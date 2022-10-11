@@ -135,14 +135,14 @@ nav.sticky {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 23%;
-    height: 23%;
+    width: 24.5%;
+    height: auto;
     fill: var(--first-color-red);
   }
 
   .logo-nav svg{
    left: 3rem;
-    width: 45%;
+    width: 90%;
     height: auto;
     fill: var(--first-color-red);
   }

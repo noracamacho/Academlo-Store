@@ -5,14 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academlo Store</title>
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <div id="loader" class="loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader--img">
+            <title>Academlo Logo</title>
+            <g>
+                <g>
+                    <path
+                    d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                    </path>
+                    <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </div>
     <!-- NAV -->
     <header>
-        <nav>
+        <nav class="before">
             <div class="logo-nav">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
                 <title>Academlo Logo</title>
@@ -40,7 +54,7 @@
             <!-- CART SHOP -->
             <div id="cart-shop" class="nav--cart">
                 <i class='bx bx-shopping-bag bx-sm'></i>
-                <span id="cart-counter" class="counter">0</span>
+                <span id="cart-counter" class="counter"><span id="cart_quantity"></span></span>
             </div>
             <!-- GRID ICON -->
             <div class="grid--icon">
@@ -55,45 +69,30 @@
                 </div>
             </div>
         </nav>   
-        <section class="main--product">
+        <!-- <section class="main--product">
             <div class="product-container producto">
                 <img src="./assets/images/featured2.png" alt="">
             </div>
-        </section>
+        </section> -->
     </header>
+    <section class="banner">
+        <div class="banner--img--container">
+            <img src="./assets/images/featured1.png" alt="">
+        </div>
+        
+    </section>
     <main>
         <section class="main--description">
-            <h2>New Sweatshirt</h2>
-            <h4>COLLECTIONS 2022<h4>
+            <h1>New Sweatshirt</h1>
+            <h4>COLLECTIONS 2022</h4>
             <p>Lacert stria of the new Hares Midweight Crewneck sweatshit imported from the 2022 series, with a modern design</p>
             <p class="price">$14.00</p>
             <div class="btn--container--main">
                 <button class="btn--discover--main">Discover</button>
-                <button class="btn--add--main">ADD TO CART</button>
+                <button class="btn-add btn--add--main">ADD TO CART</button>
             </div>
         </section> 
         <section class="section--submenu">
-            <!-- ++++++++++++++ -->
-            <!-- <div class="submenu__content">
-                <div class="submenu__text">
-                    <div class="submenu-1">
-                        <h5>Show All</h5>
-                        <p>show all products</p>
-                    </div>
-                    <div class="submenu-1">
-                        <h5>Hoodies</h5>
-                        <p>3 products</p>
-                    </div>
-                    <div class="submenu-1">
-                        <h5>Shirts</h5>
-                        <p>4 products</p>
-                    </div>
-                    <div class="submenu-1">
-                        <h5>Sweatshirts</h5>
-                        <p>4 products</p>
-                    </div> -->
-                   <!-- ++++++++++++++++++++++ -->
-
                    <div class="submenu--row">
                     <div class="submenu--col">
                         <h4>Show All</h4>
@@ -183,10 +182,10 @@
                 <p>Hecho con <span><i class='bx bxs-heart'></i></span> en Academlo</p>
             </div>
             <!-- <div class="footer--credits--container"> -->
-                <div class="footer__credits">
+                <!-- <div class="footer__credits">
                     Built by<a href="https://www.linkedin.com/in/noraelisacamacho/" class="footer__link"> Nora Camacho </a>for
                     <a href="https://www.academlo.com" class="footer__link"> Academlo </a>Bootcamp: Programación Web Full-Stack y Ciencias de Computación.
-                </div> 
+                </div>  -->
             <!-- </div> -->
         <!-- </div> -->
     </footer>

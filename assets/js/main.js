@@ -36,28 +36,19 @@ const loadComponent = () => {
         loader.classList.add( "hide" )
     }, 3000);
 }
+/* ---------------------STICKY NAV BAR--------------------------- */
+window.addEventListener('scroll', function() {
+    
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0)
+})
 
-// DARK MODE
+window.addEventListener('scroll', function() {
+    
+    let nav = document.querySelector('nav');
+    nav.classList.toggle('sticky', window.scrollY > 0)
+})
 
-document.addEventListener( "DOMContentLoaded", () =>{
-    console.log( "DOM Cargado" ) ;
-});
-
-const themeIcon = document.getElementById( "theme-btn" );
-themeIcon.addEventListener( "click", () => {
-    //element.classList.toggle("clase")
-    //Si la clase NO existe, la agrega
-    //Si la clase YA existe, la quita
-
-    document.body.classList.toggle("dark")
-
-    if( themeIcon.classList.contains("bx-moon") ){ //evaluar si existe la clase bx-moon
-        themeIcon.classList.replace("bx-moon", "bx-sun");
-    }else{
-        themeIcon.classList.replace("bx-sun", "bx-moon");
-    }
-
-});
 
 /* ---------------------VISTA DE CARRITO DE COMPRAS--------------------------- */
 const cart = document.getElementById("cart-container")
@@ -86,13 +77,13 @@ const showProducts = () => {
 
     items.forEach( producto => {
         fragment += `
-        <div class="product--card" id="${producto.id}">
+        <div class="product-card" id="${producto.id}">
             <div class="image--container">
             <img src="${producto.image}" alt="">
             </div>
             <p>$${producto.price}.00<span>Stock: ${producto.quantity}</span></p>
             <h4>${producto.name}</h4>
-            <button class="btn-add"><i class='bx bx-plus bx-sm'></i></button>
+            <button class="btn-add btn-add-apereance">+</button>
         </div>
          `
     })
@@ -101,12 +92,14 @@ const showProducts = () => {
 
     cartFunctionality()
 }
+// {/* <button class="btn-add"><i class='bx bx-plus bx-sm'></i></button> */}
 
 /* ---------------------AÑADE FUNCIONALIDAD A LOS BOTONES EN LOS PRODUCTOS--------------------------- */
 function cartFunctionality(){
     /* Obtiene todos los botones de los productos */
     const btns = document.querySelectorAll(".btn-add")
     const cart = []
+    cart_quantity.innerHTML = `0`;
 
     //Añade un eventListener a cada boton para detectar un click
     btns.forEach( button => {
@@ -140,7 +133,8 @@ function cartFunctionality(){
             }
 
             console.log( cart )
-            showProducts( cart )
+            cart_quantity.innerHTML = `${cart.length}`;
+            showProductsInCart( cart )
         })
     } )
 
@@ -150,7 +144,26 @@ function showProductsInCart(cart){
 
 }
 
+// DARK MODE
+
+const themeIcon = document.getElementById( "theme-btn" );
+themeIcon.addEventListener( "click", () => {
+    //element.classList.toggle("clase")
+    //Si la clase NO existe, la agrega
+    //Si la clase YA existe, la quita
+
+    document.body.classList.toggle("dark")
+
+    if( themeIcon.classList.contains("bx-moon") ){ //evaluar si existe la clase bx-moon
+        themeIcon.classList.replace("bx-moon", "bx-sun");
+    }else{
+        themeIcon.classList.replace("bx-sun", "bx-moon");
+    }
+
+});
+
 document.addEventListener( "DOMContentLoaded", () =>{
+    console.log( "DOM Cargado" ) ;
     loadComponent() 
     showProducts()
 })

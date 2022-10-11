@@ -45,7 +45,8 @@ body{
     line-height: 1.4;
     font-size: 1.2rem;
     transition: .5s;
-    padding: 1.5rem 0;
+   /* padding: 1.5rem 0; */
+
   }
 
   /* DARK MODE */
@@ -330,7 +331,7 @@ header{
   margin-bottom: 1rem;
 }
 
-.product--card button {
+.product--card .btn-add {
   position: absolute;
   bottom: 3.8rem;
   right: 1rem;
@@ -376,20 +377,20 @@ header{
   color: var(--first-color-red);
   margin-bottom: 2rem;
 }
-.btn--container {
+.btn--container--main {
   display: flex;
   justify-content:left;
   align-items: center;
   margin-bottom: 4rem;
 }
-.btn--discover {
+.btn--discover--main {
   width: 6rem;
   height: 3rem;
   border: 0;
   background-color: #a3a3a3;
   /* background-color: var(--text-color-light); */
 }
-.btn--add {
+.btn--add--main {
   color: white;
   font-weight: var(--fw7);
   width: 8rem;
@@ -443,12 +444,14 @@ header{
 } */
 footer {
   background-color: var(--card-color);
-  height: auto;
+  /* height: auto; */
   margin-top: 2rem;
   padding: 0;
+
 }
 /* FOOTER */
 .footer--container {
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -457,6 +460,7 @@ footer {
   /* max-width: 80rem;  */
   margin-left: auto;
   margin-right: auto;
+  /* background-color: black; */
   /* margin-bottom: 5rem; */
   /* background-color: var(--card-color); */
   color: var(--text-color);

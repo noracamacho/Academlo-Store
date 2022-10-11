@@ -191,7 +191,7 @@ header{
 .banner {
   position: relative;
   width: 100%;
-  height: 30rem;
+  height: 29rem;
   top: 0rem;
   right: 0rem;
 }
@@ -368,13 +368,13 @@ header{
 }
 
 .main--description h1{
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   color: var(--title-color);
   line-height: .9;
   font-weight: var(--fw5);
 }
 .main--description h4{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--title-color);
   margin-bottom: .7rem;
   font-weight: var(--fw5);

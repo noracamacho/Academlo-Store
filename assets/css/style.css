@@ -130,7 +130,7 @@ nav.sticky {
 
 .logo-nav {
     position: absolute;
-    top: 1.2rem;
+    top: .5rem;
     left: 1rem;
     display: flex;
     flex-direction: row;

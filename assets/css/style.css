@@ -368,13 +368,13 @@ header{
 }
 
 .main--description h1{
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   color: var(--title-color);
   line-height: .9;
   font-weight: var(--fw5);
 }
 .main--description h4{
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   color: var(--title-color);
   margin-bottom: .7rem;
   font-weight: var(--fw5);
@@ -418,6 +418,8 @@ header{
   flex-direction: row;
   flex-wrap: wrap;
   min-width: 155px;
+  /* min-width: 6rem; */
+
 
 }
 
@@ -442,7 +444,8 @@ header{
   font-weight: var(--fw7);
 }
 .submenu--col p {
-  font-size: 1rem;
+  /* cambio */
+  font-size: .9rem;
   color: var(--title-color);
   font-weight: var(--fw4);
 }
@@ -669,7 +672,8 @@ footer {
 
 @media (max-width:360px) {
   .submenu--col {
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
+    flex-basis: 40%;
   }
 } 
 

@@ -44,7 +44,7 @@ body{
     font-family: var(--body-font);
     line-height: 1.4;
     font-size: 1.2rem;
-    transition: all .5s;
+    transition: all .6s;
    /* padding: 1.5rem 0; */
 
   }
@@ -173,6 +173,7 @@ nav.sticky {
    /* Hover effect on Icons */
   .bx:hover {
     color: var(--button-hover-color);
+    transition: all 0.6s;
   }
   .grid--icon {
     position: absolute;
@@ -193,7 +194,6 @@ header{
   top: 1rem;
   display: none;
   /* background-color: yellow; */
-  transition: all 0.4s;
 }
 
 .menu-item main-links {
@@ -213,7 +213,6 @@ header{
   top: 0rem;
   right: 0rem;
   margin-bottom: 8rem;
-  transition: all 0.4s;
 }
 
 .banner--img--container {
@@ -224,8 +223,6 @@ header{
   right: 0;
   background-color: var(--first-color-red);
   z-index: -1;
-  transition: all 0.4s;
-  
 }
 
 .banner--img--container img{
@@ -234,7 +231,6 @@ header{
   position: absolute;
   bottom: 1.5rem;
   margin: 0 auto 0 auto;
-  transition: all 0.4s;
 } 
  /* PRODUCTOS */
   /* .product-container {
@@ -289,7 +285,6 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    transition: all 0.3s;
 }
 .cart--container.hide{
     display: none;
@@ -383,6 +378,7 @@ header{
 .product-card .btn-add-apereance:hover,
 .product-card .btn-add-apereance:active {
   background-color: var(--first-color-red);
+  transition: all 0.6s;
 }
 
 .main--description{
@@ -390,7 +386,6 @@ header{
   margin: 0 auto;
   width: 90%;
   height: auto;
-  transition: all 0.4s;
 }
 .h1 {
   color: var(--title-color);
@@ -434,10 +429,12 @@ header{
   border: 1px solid  #a3a3a3;
   background-color: #a3a3a3;
   cursor:pointer;
+  
 }
 /* Hover effect to discover main button */
 .btn--discover--main:hover {
   background-color: var(--first-color-red);
+  transition: all 0.6s;
 }
 
 
@@ -452,6 +449,7 @@ header{
 /* Hover effect to main add product button */
 .btn--add--main:hover {
   background-color: var(--first-color-red);
+  transition: all 0.6s;
 }
 
 /* ++++++++++++++++++ */
@@ -497,7 +495,6 @@ header{
 margin-top: 4rem;
 display: flex;
 flex-direction: column;
-transition: all 0.4s;
 }
 
 footer {
@@ -568,7 +565,6 @@ footer {
   /* cambio arriba */
   font-size: .875rem;
   line-height: 1.25rem;
-  transition: all 0.6s;
 }
 .footer--category {
   color: var(--text-color);
@@ -586,12 +582,11 @@ footer {
 .footer--link {
   color: var(--text-color);
   text-decoration: none;
-  transition: all 0.4s;
 }
 .footer--link:hover {
   color: var(--first-color-red);
   text-decoration: none;
-  
+  transition: all 0.6s;
 }
 
 .footer--bottom {
@@ -677,12 +672,12 @@ footer {
   font-size: 1rem;
   text-decoration: none;
   line-height: 1.5;
-  transition: all 0.3s;
 }
 
 .footer__link:hover,
 .footer__link:active {
   box-shadow: 0 3px hsl(0, 0%, 34%);
+  transition: all 0.6s;
 }
 
 @media screen and (min-width: 400px) {
@@ -730,6 +725,7 @@ footer {
 @media screen and (min-width: 640px) {
   .footer--container {
     flex-direction: row;
+    transition: all 0.6s;
     
   }
   .footer--information {

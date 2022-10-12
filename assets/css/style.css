@@ -165,8 +165,14 @@ nav.sticky {
     right: 6.3rem;
     top: .8rem;
   }
+ 
   .bx {
     color: var(--button-color-alt);
+    cursor: pointer;
+  }
+   /* Hover effect on Icons */
+  .bx:hover {
+    color: var(--button-hover-color);
   }
   .grid--icon {
     position: absolute;
@@ -370,8 +376,13 @@ header{
   color: var(--text-color);
   border-radius: 50%;
   border: none;
-
   box-shadow: var(--button-shadow);
+  cursor:pointer;
+}
+/* Hover effect to button of product card of the list of products */
+.product-card .btn-add-apereance:hover,
+.product-card .btn-add-apereance:active {
+  background-color: var(--first-color-red);
 }
 
 .main--description{
@@ -416,18 +427,31 @@ header{
   align-items: center;
   margin-bottom: 4rem;
 }
+
 .btn--discover--main {
   width: 6.5rem;
   height: 3.2rem;
-  border: 0;
+  border: 1px solid  #a3a3a3;
   background-color: #a3a3a3;
+  cursor:pointer;
 }
+/* Hover effect to discover main button */
+.btn--discover--main:hover {
+  background-color: var(--first-color-red);
+}
+
+
 .btn--add--main {
   color: white;
   font-weight: var(--fw7);
   width: 10rem;
   height: 3.7rem;
   background-color: var(--button-color);
+  cursor:pointer;
+}
+/* Hover effect to main add product button */
+.btn--add--main:hover {
+  background-color: var(--first-color-red);
 }
 
 /* ++++++++++++++++++ */

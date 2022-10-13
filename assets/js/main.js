@@ -1,4 +1,3 @@
-
 const items = [
     {
       id: 1,
@@ -34,7 +33,7 @@ const loadComponent = () => {
     setTimeout(() => {
         //Agrega la clase 'hide' al elemento loader
         loader.classList.add( "hide" )
-    }, 3000);
+    }, 1000);
 }
 /* ---------------------STICKY NAV BAR--------------------------- */
 window.addEventListener('scroll', function() {
@@ -51,14 +50,16 @@ window.addEventListener('scroll', function() {
 
 
 /* ---------------------VISTA DE CARRITO DE COMPRAS--------------------------- */
+//showCart();
 const cart = document.getElementById("cart-container")
 const shopIcon = document.getElementById("cart-shop")
 const shopCloseIcon = document.getElementById("close-cart")
 
+
 //Cuando ocurre un click sobre el icono de la tienda, quita la clase hide al elemento 'cart' 
 //para volverlo visible
 shopIcon.addEventListener("click", () => {
-    cart.classList.remove("hide") 
+  cart.classList.remove("hide");
 })
 
 
@@ -116,7 +117,7 @@ function cartFunctionality(){
             if( index !== -1 ){
                 //Evalua si hay suficientes productos en stock para que el cliente pueda añadir otro producto a su carrito
                 if( cart[index].quantity <= cart[index].cantidad ){
-                    alert("No hay stock")
+                    swal("No hay stock","", "error")
                 }else{
                     //Si la cantidad de ese producto seleccionado aun no sobrepasa la cantidad de productos disponibles en stock, añade otro producto igual al carrito
                     cart[index].cantidad++
@@ -135,14 +136,54 @@ function cartFunctionality(){
             console.log( cart )
             cart_quantity.innerHTML = `${cart.length}`;
             showProductsInCart( cart )
+            
         })
     } )
 
 }
-
+/* ---------------------Lista los productos agregados al carrito--------------------------- */
 function showProductsInCart(cart){
+    const productSelect = document.getElementById("produc-selec")
+    const idTotal = document.getElementById("total")
+    let fragmen = ``
+   
+    let totals = 0
+        cart.forEach(producto => {
+        let subTotal = (producto.price)*(producto.cantidad)
+        totals+=subTotal
+        fragmen +=`
+            <div class="cart--products">
+                <div class="products--img">
+                    <div class="products--center">
+                        <img src="${producto.image}">
+                    </div>
+                </div>
+                <div class="products--text">
+                    <h3>${producto.name}</h3>
+                    <p>Stock: ${producto.quantity} |<span> $${producto.price}.00</span></p>
+                    <span class="span-sub">Subtotal:$${subTotal} </span>
+                    <div class="text--btns">
+                    <button class="btn-cart">-</button><label>${producto.cantidad}</label> units<button class="btn-cart">+</button><i class='bx bx-trash-alt'></i>
+                    </div>
+                </div>
+            </div>       
+            ` })
 
-}
+            let total = `<div class="cart--items">
+            <spam class="cart--count"> ${cart.length} Items<span>
+            <spam class="cart--price"> Total: $${totals} <span>
+            </div>
+            <div class="cart--btn">
+                <button class="btn-checkout"> <i class='bx bxs-check-shield'></i> Checkout</button>
+         </div>`
+        productSelect.innerHTML = fragmen
+        idTotal.innerHTML = total
+    }
+    
+   
+
+   
+
 
 // DARK MODE
 

@@ -7,6 +7,7 @@
     <title>Academlo Store</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <div id="loader" class="loader">
@@ -63,6 +64,26 @@
             <!-- CART SHOP HIDE -->
             <div class="cart--container hide" id="cart-container">
                 <div class="cart" id="cart">
+                    <div id="produc-selec">
+                        <div class="cart--empty" >
+                            <h3 class="cart--title">My Cart</h3>
+                            <div class="cart--hide hide">
+                                <img src="./assets/images/empty-cart.png">
+                                <h2 class="cart--text--h2">Your cart is empty</h2>
+                                <span class="cart--span">You can add items to your cart by clicking on the '+' button on the product page.</span> 
+                            </div>
+                            <!-- CART SHOP EMPTY -->
+                            <div class="cart--items">
+                                <spam class="cart--count"> 0 Items<span>
+                                <spam class="cart--price"> $0.00 Items<span>
+                            </div>
+                            <div class="cart--btn">
+                                <button class="btn-checkout"> <i class='bx bxs-check-shield'></i> Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="total">
+                    </div>
                     <div class="close--cart">
                         <i class='bx bx-x' id="close-cart"></i>
                     </div>
@@ -77,7 +98,7 @@
     </header>
     <section class="banner">
         <div class="banner--img--container">
-            <img src="./assets/images/featured1.png" alt="">
+            <img src="./assets/images/featured3.png" alt="">
         </div>
         
     </section>
@@ -86,8 +107,8 @@
             <h1>New Sweatshirt</h1>
             <h4>COLLECTIONS 2022</h4>
             <p>Lastest arrival of the new Hares Midweight Crewneck sweatshit imported from the 2022 series, with a modern design.</p>
-            <p class="price">$14.00</p>
-            <div class="btn--container--main">
+            <p class="price">$24.00</p>
+            <div class="btn--container--main" id="3">
                 <button class="btn--discover--main">Discover</button>
                 <button class="btn-add btn--add--main">ADD TO CART</button>
             </div>

@@ -83,7 +83,7 @@ const showProducts = () => {
             </div>
             <p>$${producto.price}.00<span>Stock: ${producto.quantity}</span></p>
             <h4>${producto.name}</h4>
-            <button class="btn-add btn-add-apereance">+</button>
+            <button class="btn-add btn-add-apereance"><i class='bx bx-plus bx-sm'></i></button>
         </div>
          `
     })

@@ -178,6 +178,12 @@ nav.sticky {
   top: 0.8rem;
 }
 
+#btn-menu{
+  display: none;
+}
+
+
+
 header {
   position: relative;
 }
@@ -713,6 +719,8 @@ footer {
 
   }
 
+ 
+
   .banner--img--container {
     position: absolute;
     width: 70%;
@@ -752,7 +760,7 @@ footer {
 
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 700px) {
   .footer--container {
     flex-direction: row;
 
@@ -818,6 +826,38 @@ footer {
     width: 60%;
     height: 46rem;
   }
+}
+
+@media screen and (max-width: 900px){
+
+  #btn-menu{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+  .menu--container {
+    display: flex;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    top: 55px;
+    height: 100vh;
+    flex-direction: column;
+    /* align-items: unset; */
+    text-align: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .menu--container.visible{
+    display: flex;
+    font-size: 30px;
+  }
+  /* . */
+  
 }
 
 @media screen and (min-width: 900px) {

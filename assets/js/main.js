@@ -208,3 +208,16 @@ document.addEventListener( "DOMContentLoaded", () =>{
     loadComponent() 
     showProducts()
 })
+
+// funcionalidad menu amburguesa
+
+const menuBtn = document.getElementById("btn-menu")
+
+const menu = document.querySelector(".menu--container")
+
+menuBtn.addEventListener( "click" , () => {
+    
+
+    menu.classList.toggle("visible")
+   
+})

@@ -215,9 +215,14 @@ const menuBtn = document.getElementById("btn-menu")
 
 const menu = document.querySelector(".menu--container")
 
+const card = document.getElementById("cart-shop")
+
+const dark = document.getElementById("mode-dark")
+
 menuBtn.addEventListener( "click" , () => {
     
 
     menu.classList.toggle("visible")
-   
+    card.classList.toggle("no-visible")
+    dark.classList.toggle("no-visible")
 })

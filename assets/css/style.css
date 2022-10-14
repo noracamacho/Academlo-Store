@@ -176,6 +176,7 @@ nav.sticky {
   position: absolute;
   right: 1rem;
   top: 0.8rem;
+  z-index: 10;
 }
 
 #btn-menu{
@@ -838,6 +839,10 @@ footer {
     cursor: pointer;
   }
 
+  .btn-checkout{
+    display: none;
+  }
+
   .menu--container {
     display: flex;
     left: 0;
@@ -850,11 +855,25 @@ footer {
     text-align: center;
     justify-content: center;
     display: none;
+    justify-content: space-evenly;
+    
   }
 
   .menu--container.visible{
     display: flex;
     font-size: 30px;
+    top: 0;
+    text-align: center;
+    padding-left: 65px;
+    color: black;
+    cursor: pointer;
+    
+  }
+
+  .no-visible{
+    display: none;
+    
+
   }
   /* . */
   

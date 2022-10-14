@@ -22,7 +22,15 @@ const items = [
       image: 'assets/images/featured3.png',
       category: 'shirts',
       quantity: 20
-    }
+    },
+    {
+        id: 4,
+        name: 'Sweatshirts',
+        price: 14.00,
+        image: 'assets/images/home.png',
+        category: 'shirts',
+        quantity: 20
+      }
 ]
 
 /*---------------------LOADER------------------------- */
@@ -76,7 +84,7 @@ const showProducts = () => {
 
     let fragment = ``
 
-    items.forEach( producto => {
+    items.slice(0, -1).forEach( producto => {
         fragment += `
         <div class="product-card" id="${producto.id}">
             <div class="image--container">
@@ -132,15 +140,22 @@ function cartFunctionality(){
                 //Se añade al carrito
                 cart.push( selectedProduct )
             }
+            //for que recorre el arreglo cart y va incrementando la cantidad de productos en el carrito
+            totalCantidad = 0
+            for (const arti of cart) {
+            totalCantidad += arti.cantidad
+            }           
 
             console.log( cart )
-            cart_quantity.innerHTML = `${cart.length}`;
+            cart_quantity.innerHTML = `${totalCantidad}`;
             showProductsInCart( cart )
             
         })
     } )
 
 }
+
+
 /* ---------------------Lista los productos agregados al carrito--------------------------- */
 function showProductsInCart(cart){
     const productSelect = document.getElementById("produc-selec")
@@ -163,14 +178,14 @@ function showProductsInCart(cart){
                     <p>Stock: ${producto.quantity} |<span> $${producto.price}.00</span></p>
                     <span class="span-sub">Subtotal:$${subTotal} </span>
                     <div class="text--btns">
-                    <button class="btn-cart">-</button><label>${producto.cantidad}</label> units<button class="btn-cart">+</button><i class='bx bx-trash-alt'></i>
+                    <button class="btn-cart">-</button><label>${producto.cantidad}</label> units<button class="btn-cart"><i class='bx bx-trash-alt'></i></button>
                     </div>
                 </div>
             </div>       
             ` })
 
             let total = `<div class="cart--items">
-            <spam class="cart--count"> ${cart.length} Items<span>
+            <spam class="cart--count"> ${totalCantidad} Items<span>
             <spam class="cart--price"> Total: $${totals} <span>
             </div>
             <div class="cart--btn">
@@ -203,6 +218,41 @@ themeIcon.addEventListener( "click", () => {
 
 });
 
+// Product filter function
+
+
+const showProductsFiltered = (itemName) => {
+    const productContainer = document.getElementById("products-list");
+    let itemsSelection = [];
+    if(itemName === 'all') {
+        itemsSelection = items;
+    } else {
+        itemsSelection = items.filter((item) => item.name === itemName);
+    }
+    let fragment = ``;
+
+    itemsSelection.forEach( producto => {
+        fragment += `
+        <div class="product-card" id="${producto.id}">
+            <div class="image--container">
+            <img src="${producto.image}" alt="">
+            </div>
+            <p>$${producto.price}.00<span>Stock: ${producto.quantity}</span></p>
+            <h4>${producto.name}</h4>
+            <button class="btn-add btn-add-apereance">+</button>
+        </div>
+         `
+    });
+
+    productContainer.innerHTML = fragment
+
+    cartFunctionality()
+}
+
+
+
+
+
 document.addEventListener( "DOMContentLoaded", () =>{
     console.log( "DOM Cargado" ) ;
     loadComponent() 
@@ -215,14 +265,9 @@ const menuBtn = document.getElementById("btn-menu")
 
 const menu = document.querySelector(".menu--container")
 
-const card = document.getElementById("cart-shop")
-
-const dark = document.getElementById("mode-dark")
-
 menuBtn.addEventListener( "click" , () => {
     
 
     menu.classList.toggle("visible")
-    card.classList.toggle("no-visible")
-    dark.classList.toggle("no-visible")
+   
 })

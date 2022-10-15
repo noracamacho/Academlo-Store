@@ -391,6 +391,7 @@ header {
   color: var(--title-color);
   line-height: .9;
   font-weight: var(--fw5);
+  transition: all 0.6s;
 }
 
 .main--description h4 {
@@ -398,6 +399,7 @@ header {
   color: var(--title-color);
   margin-bottom: .7rem;
   font-weight: var(--fw5);
+  transition: all 0.6s;
 }
 
 .main--description p {
@@ -406,6 +408,7 @@ header {
   color: var(--text-color);
   margin-bottom: 1.3rem;
   max-width: 28rem;
+  transition: all 0.6s;
 }
 
 .main--description .price {
@@ -413,6 +416,7 @@ header {
   font-weight: var(--fw5);
   color: var(--first-color-red);
   margin-bottom: 3rem;
+  transition: all 0.6s;
 }
 
 .btn--container--main {
@@ -426,10 +430,12 @@ header {
 .btn--discover--main {
   width: 6.5rem;
   height: 3.2rem;
+  font-size: 1rem;
   /* border: 2px solid  #a3a3a3; */
   border: none;
   background-color: #a3a3a3;
   cursor: pointer;
+  font-weight: var(--fw7);
   transition: all 0.6s;
 }
 .btn--discover--main:hover {
@@ -453,6 +459,7 @@ header {
 .btn--add--main:hover {
   background-color: var(--first-color-red);
   transition: all 0.6s;
+  color: black;
 }
 
 /* ++++++++++++++++++ */
@@ -520,7 +527,6 @@ footer {
   background-color: var(--card-color);
   margin-top: 2rem;
   padding: 0;
-
 }
 
 /* FOOTER */
@@ -801,7 +807,7 @@ footer {
     height: auto;
     top: 9rem;
     left: 3rem;
-    transition: all 0.25s;
+    transition: all 0.6s;
   }
 }
 
@@ -929,6 +935,17 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+  .submenu--col h4 {
+    font-size: 1.35rem;
+    font-weight: var(--fw5);
+  }
+  
+  .submenu--col p {
+    /* cambio */
+    font-size: 1.2rem;
+    color: var(--title-color);
+    font-weight: var(--fw4);
+  }
   .menu--container {
     display: flex;
     /* background-color: yellow; */
@@ -1005,10 +1022,10 @@ footer {
     top: 2.3rem;
   }
   
-  .bx {
+  /* .bx {
     color: var(--title-color);
     transition: all 0.6s;
-  }
+  } */
    /* Hover effect on Icons */
    .bx:hover {
     color: var(--button-hover-color);

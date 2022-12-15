@@ -1,3 +1,3 @@
 # Academlo-Store
 Academlo Ecommerce Project
-https://academlo-estore.netlify.app
+To see a demo of the Academlo Ecommerce Project go here -> Hosting URL: https://academlo-estore.netlify.app
